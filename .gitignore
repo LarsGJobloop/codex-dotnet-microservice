@@ -1,0 +1,13 @@
+# Binaries and build output
+/bin/
+/build/
+*.exe
+*.test
+*.out
+
+# Dependency directories
+vendor/
+
+# Tool directories
+.idea/
+.vscode/
