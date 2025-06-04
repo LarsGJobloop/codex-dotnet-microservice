@@ -20,8 +20,13 @@
       devShells = withPkgs (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            # .NET Toolchain
-            dotnetCorePackages.sdk_9_0
+            # go development
+            go
+            go-outline
+            gopls
+            gopkgs
+            go-tools
+            delve
 
             # IaC
             opentofu
@@ -36,10 +41,6 @@
             sops
             age
           ];
-
-          env = {
-            DOTNET_ROOT = builtins.toString pkgs.dotnetCorePackages.sdk_9_0;
-          };
         };
       });
 
